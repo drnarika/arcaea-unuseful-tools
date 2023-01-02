@@ -2,8 +2,6 @@
 #算分器
 from time import time
 
-
-
 notes = 0
 
 while True:

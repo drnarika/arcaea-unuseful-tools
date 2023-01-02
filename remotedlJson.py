@@ -1,5 +1,4 @@
 import json
-import re
 
 #TODO:添加616排序 可能？
 path_slst = input('输入songlist文件夹')
@@ -21,7 +20,7 @@ except Exception as e:
 for s in range(0,len(slst_json['songs'])):
     slst_json['songs'][s]['remote_dl'] = key
 
-slst_comp = json.dumps(slst_json,sort_keys=True, indent=2,ensure_ascii=False)
+slst_comp = json.dumps(slst_json, indent=2,ensure_ascii=False)
 slst = open(path_slst,'w',encoding='UTF-8')
 slst.write(slst_comp)
 print('Done.')
