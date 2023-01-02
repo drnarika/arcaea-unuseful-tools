@@ -80,9 +80,11 @@ def calc_by_old_rating(new_defnum: int, old_rating: int ,plus_rating: int) -> fl
             return calculate_rating(new_defnum,9500000+300000*(old_rating - old_defnum))
             
 # update_best_scores()
-uprating = 8.4
-# update_chart(uprating)
-update_best_scores()
-# update_recent30(uprating)
+uprating = 0
+update_chart(uprating)
+update_best_scores() #这里建议使用后台的b30定数更新而不是这个
+update_recent30(uprating)
+
+
 c.close()
 conn.close()
